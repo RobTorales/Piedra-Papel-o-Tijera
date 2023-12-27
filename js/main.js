@@ -54,11 +54,19 @@ function iniciarTurno(e) {
     if (puntosUsuario === 5 || puntosPC === 5) {
 
         if (puntosUsuario === 5) {
-            instrucciones.innerText = "🎉¡Ganaste el juego!🎉"
+            let gifElement = document.createElement("img")
+            gifElement.src = "./images/gigachad.gif"
+
+            instrucciones.innerText = "🧐¡Que sigma!🧐"
+            instrucciones.appendChild(gifElement);
         }
 
         if (puntosPC === 5) {
-            instrucciones.innerText = "🤣¡La CPU te domó!🤣"
+            let pngElement = document.createElement("img")
+            pngElement.src = "./images/virgin.png"
+
+            instrucciones.innerText = "🤣¡La CPU te domó sos un virgin!🤣"
+            instrucciones.appendChild(pngElement);
         }
 
         elegiTuArma.classList.add("disabled");
