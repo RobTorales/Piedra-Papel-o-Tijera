@@ -23,24 +23,24 @@ function iniciarTurno(e) {
 
 
     if (eleccionPC === 0) {
-        eleccionPC = "piedra💎";
+        eleccionPC = "cuarzo💎"
     } else if (eleccionPC === 1) {
-        eleccionPC = "papel🧾"
+        eleccionPC = "papiro🧾"
     } else if (eleccionPC === 2) {
-        eleccionPC = "tijera✂"
+        eleccionPC = "navaja🪒"
     }
 
 
     if (
-        (eleccionUsuario === "piedra💎" && eleccionPC === "tijera✂") ||
-        (eleccionUsuario === "tijera✂"&& eleccionPC === "papel🧾") ||
-        (eleccionUsuario === "papel🧾"&& eleccionPC === "piedra💎")
+        (eleccionUsuario === "cuarzo💎" && eleccionPC === "navaja🪒") ||
+        (eleccionUsuario === "navaja🪒"&& eleccionPC === "papiro🧾") ||
+        (eleccionUsuario === "papiro🧾"&& eleccionPC === "cuarzo💎")
     ) {
         ganaUsuario();
     } else if (
-        (eleccionPC === "piedra💎" && eleccionUsuario === "tijera✂") ||
-        (eleccionPC === "tijera✂"&& eleccionUsuario === "papel🧾") ||
-        (eleccionPC === "papel🧾"&& eleccionUsuario === "piedra💎")
+        (eleccionPC === "cuarzo💎" && eleccionUsuario === "navaja🪒") ||
+        (eleccionPC === "navaja🪒"&& eleccionUsuario === "papiro🧾") ||
+        (eleccionPC === "papiro🧾"&& eleccionUsuario === "cuarzo💎")
     ) {
         ganaPC();
     } else {
