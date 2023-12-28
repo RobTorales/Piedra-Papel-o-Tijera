@@ -23,24 +23,24 @@ function iniciarTurno(e) {
 
 
     if (eleccionPC === 0) {
-        eleccionPC = "cuarzo💎"
+        eleccionPC = "piedra💎"
     } else if (eleccionPC === 1) {
-        eleccionPC = "papiro🧾"
+        eleccionPC = "papel🧾"
     } else if (eleccionPC === 2) {
-        eleccionPC = "navaja🪒"
+        eleccionPC = "tijera✂"
     }
 
 
     if (
-        (eleccionUsuario === "cuarzo💎" && eleccionPC === "navaja🪒") ||
-        (eleccionUsuario === "navaja🪒"&& eleccionPC === "papiro🧾") ||
-        (eleccionUsuario === "papiro🧾"&& eleccionPC === "cuarzo💎")
+        (eleccionUsuario === "piedra💎" && eleccionPC === "tijera✂") ||
+        (eleccionUsuario === "tijera✂"&& eleccionPC === "papel🧾") ||
+        (eleccionUsuario === "papel🧾"&& eleccionPC === "piedra💎")
     ) {
         ganaUsuario();
     } else if (
-        (eleccionPC === "cuarzo💎" && eleccionUsuario === "navaja🪒") ||
-        (eleccionPC === "navaja🪒"&& eleccionUsuario === "papiro🧾") ||
-        (eleccionPC === "papiro🧾"&& eleccionUsuario === "cuarzo💎")
+        (eleccionPC === "piedra💎" && eleccionUsuario === "tijera✂") ||
+        (eleccionPC === "tijera✂"&& eleccionUsuario === "papel🧾") ||
+        (eleccionPC === "papel🧾"&& eleccionUsuario === "piedra💎")
     ) {
         ganaPC();
     } else {
@@ -54,19 +54,15 @@ function iniciarTurno(e) {
     if (puntosUsuario === 5 || puntosPC === 5) {
 
         if (puntosUsuario === 5) {
-            let gifElement = document.createElement("img")
-            gifElement.src = "./images/gigachad.gif"
 
-            instrucciones.innerText = "🧐¡Que sigma!🧐"
-            instrucciones.appendChild(gifElement);
+            instrucciones.innerText = "🎉¡Has ganado el juego!🎉"
+
         }
 
         if (puntosPC === 5) {
-            let pngElement = document.createElement("img")
-            pngElement.src = "./images/virgin.png"
 
-            instrucciones.innerText = "🤣¡La CPU te domó sos un virgin!🤣"
-            instrucciones.appendChild(pngElement);
+            instrucciones.innerText = "😭¡La CPU gano el juego!😭"
+
         }
 
         elegiTuArma.classList.add("disabled");
@@ -86,7 +82,7 @@ function ganaUsuario() {
 function ganaPC() {
     puntosPC++;
     contenedorPuntosPC.innerText = puntosPC;
-    contenedorGanaPunto.innerText = "😂¡La CPU ganó un punto!😂"
+    contenedorGanaPunto.innerText = "😥¡La CPU ganó un punto!😥"
 }
 
 function empate() {
